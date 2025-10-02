@@ -221,6 +221,7 @@ binary_sensor:
   - platform: gpio
     name: "blind_down_sens"
     id: blind_down_sens
+    use_interrupt: false
     pin:
       id: in_pin_down
       number: GPIO25
@@ -236,6 +237,7 @@ binary_sensor:
   - platform: gpio
     name: "blind_up_sens"
     id: blind_up_sens
+    use_interrupt: false
     pin:
       id: in_pin_up
       number: GPIO21
@@ -251,6 +253,7 @@ binary_sensor:
   - platform: gpio
     name: "blind_stop_sens"
     id: blind_stop_sens
+    use_interrupt: false
     pin:
       id: in_pin_stop
       number: GPIO32
@@ -422,6 +425,7 @@ button:
     name: "Blind Down"
     id: blind_down
     icon: "mdi:window-shutter"
+    internal: True
     on_press:
       - logger.log: Button down Pressed
       - lambda: |-
@@ -439,6 +443,7 @@ button:
     name: "Blind Up"
     id: blind_up
     icon: "mdi:window-shutter"
+    internal: True
     on_press:
       - logger.log: Button up Pressed
       - lambda: |-
@@ -456,6 +461,7 @@ button:
     name: "Blind Stop"
     id: blind_stop
     icon: "mdi:window-shutter"
+    internal: True
     on_press:
       - logger.log: Button stop Pressed
       - lambda: |-
