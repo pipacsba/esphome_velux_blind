@@ -14,3 +14,6 @@ Please note: non of the above pins can drive 5 V; they are (as are all ESP32 GPI
 
 To use the same pins for input and output the following discussion is helped me out:
 https://community.home-assistant.io/t/open-drain-output-and-binary-sensor-at-the-same-pin/835056/6
+
+the base esphome configuration of the atom echo is from the esphome projects (to also implement voice assistant):
+https://github.com/esphome/wake-word-voice-assistants/blob/main/m5stack-atom-echo/m5stack-atom-echo.yaml
